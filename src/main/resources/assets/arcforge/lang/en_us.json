@@ -1,3 +1,13 @@
 {
-  "itemGroup.arcforge": "Arcforge"
+  "itemGroup.arcforge": "Arcforge",
+  "item.arcforge.raw_mana_crystal": "Raw Mana Crystal",
+  "item.arcforge.refined_mana_crystal": "Refined Mana Crystal",
+  "item.arcforge.runic_dust": "Runic Dust",
+  "item.arcforge.brass_frame": "Brass Frame",
+  "item.arcforge.arcana_coil": "Arcana Coil",
+  "item.arcforge.rune_plate": "Rune Plate",
+  "item.arcforge.heat_rune": "Heat Rune",
+  "item.arcforge.light_rune": "Light Rune",
+  "item.arcforge.basic_spell_core": "Basic Spell Core",
+  "block.arcforge.raw_mana_crystal_ore": "Raw Mana Crystal Ore"
 }

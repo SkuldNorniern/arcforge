@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "arcforge:block/raw_mana_crystal_ore" }
+  }
+}

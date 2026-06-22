@@ -1,3 +1,13 @@
 {
-  "itemGroup.arcforge": "아크포지"
+  "itemGroup.arcforge": "아크포지",
+  "item.arcforge.raw_mana_crystal": "원석 마나 결정",
+  "item.arcforge.refined_mana_crystal": "정제된 마나 결정",
+  "item.arcforge.runic_dust": "룬 가루",
+  "item.arcforge.brass_frame": "황동 프레임",
+  "item.arcforge.arcana_coil": "아르카나 코일",
+  "item.arcforge.rune_plate": "룬 철판",
+  "item.arcforge.heat_rune": "열기 룬",
+  "item.arcforge.light_rune": "빛 룬",
+  "item.arcforge.basic_spell_core": "기초 스펠 코어",
+  "block.arcforge.raw_mana_crystal_ore": "원석 마나 결정 광석"
 }

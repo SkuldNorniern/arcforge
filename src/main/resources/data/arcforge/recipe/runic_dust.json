@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "arcforge:raw_mana_crystal"
+  ],
+  "result": {
+    "id": "arcforge:runic_dust",
+    "count": 2
+  }
+}

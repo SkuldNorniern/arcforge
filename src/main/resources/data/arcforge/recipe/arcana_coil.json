@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot",
+    "arcforge:runic_dust"
+  ],
+  "result": {
+    "id": "arcforge:arcana_coil",
+    "count": 1
+  }
+}

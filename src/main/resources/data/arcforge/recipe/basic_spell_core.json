@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "arcforge:refined_mana_crystal",
+    "arcforge:brass_frame",
+    "arcforge:runic_dust"
+  ],
+  "result": {
+    "id": "arcforge:basic_spell_core",
+    "count": 1
+  }
+}

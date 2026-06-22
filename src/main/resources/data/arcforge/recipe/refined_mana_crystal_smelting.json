@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "arcforge:raw_mana_crystal",
+  "result": {
+    "id": "arcforge:refined_mana_crystal",
+    "count": 1
+  },
+  "experience": 0.5,
+  "cookingtime": 200
+}

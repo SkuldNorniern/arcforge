@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:iron_ingot",
+    "arcforge:runic_dust"
+  ],
+  "result": {
+    "id": "arcforge:rune_plate",
+    "count": 1
+  }
+}
