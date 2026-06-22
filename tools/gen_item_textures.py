@@ -206,13 +206,21 @@ def gen_raw_mana_crystal_ore():
     return img
 
 
-def gen_arcana_cell():
+def gen_arcana_cell_frame():
     img = new_canvas()
     d = ImageDraw.Draw(img)
     d.rectangle([0, 0, 15, 15], fill=(96, 72, 40, 255))
     d.rectangle([1, 1, 14, 14], outline=(168, 130, 58, 255), width=1)
-    d.rectangle([3, 3, 12, 12], fill=(94, 173, 235, 255), outline=(214, 176, 96, 255), width=1)
-    d.rectangle([5, 5, 10, 10], fill=(168, 222, 250, 255))
+    d.rectangle([3, 3, 12, 12], outline=(214, 176, 96, 255), width=1)
+    return img
+
+
+def gen_arcana_cell_crystal():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(46, 90, 130, 255))
+    d.polygon([(7, 1), (13, 7), (7, 14), (1, 7)], fill=(94, 173, 235, 255), outline=(168, 222, 250, 255))
+    d.polygon([(7, 4), (10, 7), (7, 11), (4, 7)], fill=(168, 222, 250, 255))
     d.rectangle([7, 7, 8, 8], fill=(230, 245, 255, 255))
     return img
 
@@ -299,7 +307,8 @@ def main():
         save(gen(), os.path.join(ITEM_DIR, f"{name}.png"))
 
     save(gen_raw_mana_crystal_ore(), os.path.join(BLOCK_DIR, "raw_mana_crystal_ore.png"))
-    save(gen_arcana_cell(), os.path.join(BLOCK_DIR, "arcana_cell.png"))
+    save(gen_arcana_cell_frame(), os.path.join(BLOCK_DIR, "arcana_cell_frame.png"))
+    save(gen_arcana_cell_crystal(), os.path.join(BLOCK_DIR, "arcana_cell_crystal.png"))
     save(gen_rune_scriber_desk(), os.path.join(BLOCK_DIR, "rune_scriber_desk.png"))
     save(gen_rune_scriber_tablet(), os.path.join(BLOCK_DIR, "rune_scriber_tablet.png"))
     save(gen_rune_scriber_stylus(), os.path.join(BLOCK_DIR, "rune_scriber_stylus.png"))
