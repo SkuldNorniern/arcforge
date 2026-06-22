@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "arcforge:block/spell_assembler" }
+  }
+}

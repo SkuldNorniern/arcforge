@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "arcforge:rune_plate",
+    "arcforge:runic_dust",
+    "minecraft:amethyst_shard"
+  ],
+  "result": {
+    "id": "arcforge:self_glyph",
+    "count": 1
+  }
+}

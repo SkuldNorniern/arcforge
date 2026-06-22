@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BAB",
+    " R ",
+    "BAB"
+  ],
+  "key": {
+    "B": "arcforge:brass_frame",
+    "A": "arcforge:arcana_coil",
+    "R": "arcforge:rune_plate"
+  },
+  "result": {
+    "id": "arcforge:spell_assembler",
+    "count": 1
+  }
+}

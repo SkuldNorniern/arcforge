@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "arcforge:rune_plate",
+    "arcforge:runic_dust",
+    "minecraft:glass"
+  ],
+  "result": {
+    "id": "arcforge:area_glyph",
+    "count": 1
+  }
+}

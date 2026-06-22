@@ -2,6 +2,7 @@ package com.nornity.arcforge.registry;
 
 import com.nornity.arcforge.machine.block.ArcanaCellBlock;
 import com.nornity.arcforge.machine.block.RuneScriberBlock;
+import com.nornity.arcforge.machine.block.SpellAssemblerBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
@@ -40,6 +41,16 @@ public class ModBlocks {
             .mapColor(MapColor.WOOD)
             .sound(SoundType.WOOD)
             .strength(2.5f, 3.0f)
+            .noOcclusion())
+    );
+
+    public static final DeferredBlock<SpellAssemblerBlock> SPELL_ASSEMBLER = BLOCKS.register(
+        "spell_assembler",
+        id -> new SpellAssemblerBlock(BlockBehaviour.Properties.of()
+            .setId(ResourceKey.create(Registries.BLOCK, id))
+            .mapColor(MapColor.COLOR_PURPLE)
+            .sound(SoundType.AMETHYST)
+            .strength(3.0f, 6.0f)
             .noOcclusion())
     );
 }

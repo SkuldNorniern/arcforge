@@ -8,11 +8,22 @@
   "item.arcforge.rune_plate": "Rune Plate",
   "item.arcforge.heat_rune": "Heat Rune",
   "item.arcforge.light_rune": "Light Rune",
+  "item.arcforge.pull_rune": "Pull Rune",
+  "item.arcforge.push_rune": "Push Rune",
+  "item.arcforge.touch_glyph": "Touch Glyph",
+  "item.arcforge.self_glyph": "Self Glyph",
+  "item.arcforge.area_glyph": "Area Glyph",
+  "item.arcforge.block_sigil": "Block Sigil",
+  "item.arcforge.item_sigil": "Item Sigil",
+  "item.arcforge.machine_sigil": "Machine Sigil",
   "item.arcforge.basic_spell_core": "Basic Spell Core",
+  "item.arcforge.spell_core.no_components": "No spell components installed",
   "block.arcforge.raw_mana_crystal_ore": "Raw Mana Crystal Ore",
   "block.arcforge.arcana_cell": "Arcana Cell",
   "item.arcforge.arcana_cell.capacity": "Stores up to %s Arcana",
   "message.arcforge.arcana_cell.charge": "Arcana: %s / %s",
   "block.arcforge.rune_scriber": "Rune Scriber",
-  "container.arcforge.rune_scriber": "Rune Scriber"
+  "container.arcforge.rune_scriber": "Rune Scriber",
+  "block.arcforge.spell_assembler": "Spell Assembler",
+  "container.arcforge.spell_assembler": "Spell Assembler"
 }

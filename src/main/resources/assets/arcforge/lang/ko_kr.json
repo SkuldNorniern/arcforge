@@ -8,11 +8,22 @@
   "item.arcforge.rune_plate": "룬 철판",
   "item.arcforge.heat_rune": "열기 룬",
   "item.arcforge.light_rune": "빛 룬",
+  "item.arcforge.pull_rune": "당김 룬",
+  "item.arcforge.push_rune": "밀침 룬",
+  "item.arcforge.touch_glyph": "접촉 문양",
+  "item.arcforge.self_glyph": "자가 문양",
+  "item.arcforge.area_glyph": "범위 문양",
+  "item.arcforge.block_sigil": "블록 인장",
+  "item.arcforge.item_sigil": "아이템 인장",
+  "item.arcforge.machine_sigil": "기계 인장",
   "item.arcforge.basic_spell_core": "기초 스펠 코어",
+  "item.arcforge.spell_core.no_components": "설치된 스펠 구성요소 없음",
   "block.arcforge.raw_mana_crystal_ore": "원석 마나 결정 광석",
   "block.arcforge.arcana_cell": "아르카나 셀",
   "item.arcforge.arcana_cell.capacity": "최대 %s 아르카나 저장",
   "message.arcforge.arcana_cell.charge": "아르카나: %s / %s",
   "block.arcforge.rune_scriber": "룬 서기대",
-  "container.arcforge.rune_scriber": "룬 서기대"
+  "container.arcforge.rune_scriber": "룬 서기대",
+  "block.arcforge.spell_assembler": "스펠 조립기",
+  "container.arcforge.spell_assembler": "스펠 조립기"
 }

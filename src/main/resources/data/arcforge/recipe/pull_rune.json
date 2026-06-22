@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "arcforge:rune_plate",
+    "arcforge:runic_dust",
+    "minecraft:slime_ball"
+  ],
+  "result": {
+    "id": "arcforge:pull_rune",
+    "count": 1
+  }
+}

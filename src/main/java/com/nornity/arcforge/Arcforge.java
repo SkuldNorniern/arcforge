@@ -4,7 +4,9 @@ import com.mojang.logging.LogUtils;
 import com.nornity.arcforge.config.Config;
 import com.nornity.arcforge.registry.ModBlockEntities;
 import com.nornity.arcforge.registry.ModBlocks;
+import com.nornity.arcforge.registry.ModDataComponents;
 import com.nornity.arcforge.registry.ModItems;
+import com.nornity.arcforge.registry.ModMenuTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -39,10 +41,19 @@ public class Arcforge {
                 output.accept(ModItems.RUNE_PLATE.get());
                 output.accept(ModItems.HEAT_RUNE.get());
                 output.accept(ModItems.LIGHT_RUNE.get());
+                output.accept(ModItems.PULL_RUNE.get());
+                output.accept(ModItems.PUSH_RUNE.get());
+                output.accept(ModItems.TOUCH_GLYPH.get());
+                output.accept(ModItems.SELF_GLYPH.get());
+                output.accept(ModItems.AREA_GLYPH.get());
+                output.accept(ModItems.BLOCK_SIGIL.get());
+                output.accept(ModItems.ITEM_SIGIL.get());
+                output.accept(ModItems.MACHINE_SIGIL.get());
                 output.accept(ModItems.BASIC_SPELL_CORE.get());
                 output.accept(ModItems.RAW_MANA_CRYSTAL_ORE.get());
                 output.accept(ModItems.ARCANA_CELL.get());
                 output.accept(ModItems.RUNE_SCRIBER.get());
+                output.accept(ModItems.SPELL_ASSEMBLER.get());
             })
             .build());
 
@@ -50,6 +61,8 @@ public class Arcforge {
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITY_TYPES.register(modEventBus);
+        ModDataComponents.DATA_COMPONENT_TYPES.register(modEventBus);
+        ModMenuTypes.MENU_TYPES.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
         modContainer.registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC);
     }
