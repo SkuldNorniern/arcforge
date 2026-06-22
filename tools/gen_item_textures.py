@@ -5,7 +5,7 @@ import sys
 from PIL import Image, ImageDraw
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "utils"))
-from pixel_art import new_canvas, save  # noqa: E402
+from pixel_art import new_canvas, save, save_animated  # noqa: E402
 
 ITEM_DIR = os.path.join(
     os.path.dirname(__file__), "..", "src", "main", "resources", "assets", "arcforge", "textures", "item"
@@ -207,14 +207,23 @@ def gen_arcane_furnace_front():
     return img
 
 
-def gen_arcane_furnace_front_lit():
-    img = new_canvas()
-    d = ImageDraw.Draw(img)
-    d.rectangle([0, 0, 15, 15], fill=(70, 70, 76, 255))
-    d.rectangle([1, 1, 14, 14], outline=(45, 45, 50, 255), width=1)
-    d.rectangle([4, 6, 11, 11], fill=(120, 50, 150, 255), outline=(200, 140, 230, 255))
-    d.polygon([(6, 10), (7, 7), (8, 9), (9, 6), (10, 10)], fill=(255, 150, 60, 255))
-    return img
+def gen_arcane_furnace_front_lit_frames():
+    flame_shapes = [
+        [(6, 10), (7, 7), (8, 9), (9, 6), (10, 10)],
+        [(6, 10), (7, 6), (8, 9), (9, 5), (10, 10)],
+        [(6, 10), (7, 8), (8, 6), (9, 7), (10, 10)],
+        [(6, 10), (7, 6), (8, 9), (9, 5), (10, 10)],
+    ]
+    frames = []
+    for shape in flame_shapes:
+        img = new_canvas()
+        d = ImageDraw.Draw(img)
+        d.rectangle([0, 0, 15, 15], fill=(70, 70, 76, 255))
+        d.rectangle([1, 1, 14, 14], outline=(45, 45, 50, 255), width=1)
+        d.rectangle([4, 6, 11, 11], fill=(120, 50, 150, 255), outline=(200, 140, 230, 255))
+        d.polygon(shape, fill=(255, 150, 60, 255))
+        frames.append(img)
+    return frames
 
 
 def gen_arcane_furnace_socket():
@@ -242,12 +251,21 @@ def gen_rune_lamp_head():
     return img
 
 
-def gen_rune_lamp_head_lit():
-    img = new_canvas()
-    d = ImageDraw.Draw(img)
-    d.rectangle([0, 0, 15, 15], fill=(255, 240, 180, 255))
-    d.rectangle([2, 2, 13, 13], fill=(255, 250, 220, 255), outline=(255, 255, 255, 255))
-    return img
+def gen_rune_lamp_head_lit_frames():
+    glow_levels = [
+        ((255, 240, 180, 255), (255, 250, 220, 255)),
+        ((250, 230, 165, 255), (255, 245, 205, 255)),
+        ((245, 220, 150, 255), (255, 240, 195, 255)),
+        ((250, 230, 165, 255), (255, 245, 205, 255)),
+    ]
+    frames = []
+    for outer, inner in glow_levels:
+        img = new_canvas()
+        d = ImageDraw.Draw(img)
+        d.rectangle([0, 0, 15, 15], fill=outer)
+        d.rectangle([2, 2, 13, 13], fill=inner, outline=(255, 255, 255, 255))
+        frames.append(img)
+    return frames
 
 
 def gen_basic_spell_core():
@@ -411,14 +429,14 @@ def main():
     os.makedirs(os.path.join(BLOCK_DIR, "arcane_furnace"), exist_ok=True)
     save(gen_arcane_furnace_body(), os.path.join(BLOCK_DIR, "arcane_furnace", "body.png"))
     save(gen_arcane_furnace_front(), os.path.join(BLOCK_DIR, "arcane_furnace", "front.png"))
-    save(gen_arcane_furnace_front_lit(), os.path.join(BLOCK_DIR, "arcane_furnace", "front_lit.png"))
+    save_animated(gen_arcane_furnace_front_lit_frames(), os.path.join(BLOCK_DIR, "arcane_furnace", "front_lit.png"), frametime=5)
     save(gen_arcane_furnace_socket(), os.path.join(BLOCK_DIR, "arcane_furnace", "socket.png"))
     save(gen_arcane_furnace_gui(), os.path.join(GUI_DIR, "arcane_furnace.png"))
 
     os.makedirs(os.path.join(BLOCK_DIR, "rune_lamp"), exist_ok=True)
     save(gen_rune_lamp_post(), os.path.join(BLOCK_DIR, "rune_lamp", "post.png"))
     save(gen_rune_lamp_head(), os.path.join(BLOCK_DIR, "rune_lamp", "head.png"))
-    save(gen_rune_lamp_head_lit(), os.path.join(BLOCK_DIR, "rune_lamp", "head_lit.png"))
+    save_animated(gen_rune_lamp_head_lit_frames(), os.path.join(BLOCK_DIR, "rune_lamp", "head_lit.png"), frametime=8)
 
 
 if __name__ == "__main__":
