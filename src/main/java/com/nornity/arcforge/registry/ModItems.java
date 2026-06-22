@@ -1,5 +1,6 @@
 package com.nornity.arcforge.registry;
 
+import com.nornity.arcforge.machine.block.ArcanaCellBlockItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -29,4 +30,11 @@ public class ModItems {
 
     public static final DeferredItem<BlockItem> RAW_MANA_CRYSTAL_ORE =
         ITEMS.registerSimpleBlockItem(ModBlocks.RAW_MANA_CRYSTAL_ORE);
+
+    public static final DeferredItem<ArcanaCellBlockItem> ARCANA_CELL =
+        ITEMS.registerItem(
+            "arcana_cell",
+            props -> new ArcanaCellBlockItem(ModBlocks.ARCANA_CELL.get(), props),
+            Item.Properties::new
+        );
 }

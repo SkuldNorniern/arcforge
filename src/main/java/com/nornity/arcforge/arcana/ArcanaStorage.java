@@ -22,6 +22,10 @@ public class ArcanaStorage {
         return maxTransferRate;
     }
 
+    public void setAmount(long amount) {
+        this.amount = Math.max(0, Math.min(amount, capacity));
+    }
+
     public long receive(long amount, boolean simulate) {
         long accepted = Math.min(Math.min(amount, maxTransferRate), capacity - this.amount);
         if (accepted <= 0) {

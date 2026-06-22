@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BFB",
+    "FRF",
+    "BFB"
+  ],
+  "key": {
+    "B": "arcforge:brass_frame",
+    "F": "arcforge:arcana_coil",
+    "R": "arcforge:refined_mana_crystal"
+  },
+  "result": {
+    "id": "arcforge:arcana_cell",
+    "count": 1
+  }
+}

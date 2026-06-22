@@ -9,5 +9,8 @@
   "item.arcforge.heat_rune": "열기 룬",
   "item.arcforge.light_rune": "빛 룬",
   "item.arcforge.basic_spell_core": "기초 스펠 코어",
-  "block.arcforge.raw_mana_crystal_ore": "원석 마나 결정 광석"
+  "block.arcforge.raw_mana_crystal_ore": "원석 마나 결정 광석",
+  "block.arcforge.arcana_cell": "아르카나 셀",
+  "item.arcforge.arcana_cell.capacity": "최대 %s 아르카나 저장",
+  "message.arcforge.arcana_cell.charge": "아르카나: %s / %s"
 }

@@ -2,6 +2,7 @@ package com.nornity.arcforge;
 
 import com.mojang.logging.LogUtils;
 import com.nornity.arcforge.config.Config;
+import com.nornity.arcforge.registry.ModBlockEntities;
 import com.nornity.arcforge.registry.ModBlocks;
 import com.nornity.arcforge.registry.ModItems;
 import net.minecraft.core.registries.Registries;
@@ -40,12 +41,14 @@ public class Arcforge {
                 output.accept(ModItems.LIGHT_RUNE.get());
                 output.accept(ModItems.BASIC_SPELL_CORE.get());
                 output.accept(ModItems.RAW_MANA_CRYSTAL_ORE.get());
+                output.accept(ModItems.ARCANA_CELL.get());
             })
             .build());
 
     public Arcforge(IEventBus modEventBus, ModContainer modContainer) {
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
+        ModBlockEntities.BLOCK_ENTITY_TYPES.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
         modContainer.registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC);
     }

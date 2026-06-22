@@ -102,6 +102,17 @@ def gen_raw_mana_crystal_ore():
     return img
 
 
+def gen_arcana_cell():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(96, 72, 40, 255))
+    d.rectangle([1, 1, 14, 14], outline=(168, 130, 58, 255), width=1)
+    d.rectangle([3, 3, 12, 12], fill=(94, 173, 235, 255), outline=(214, 176, 96, 255), width=1)
+    d.rectangle([5, 5, 10, 10], fill=(168, 222, 250, 255))
+    d.rectangle([7, 7, 8, 8], fill=(230, 245, 255, 255))
+    return img
+
+
 def main():
     os.makedirs(ITEM_DIR, exist_ok=True)
     os.makedirs(BLOCK_DIR, exist_ok=True)
@@ -121,6 +132,7 @@ def main():
         save(gen(), os.path.join(ITEM_DIR, f"{name}.png"))
 
     save(gen_raw_mana_crystal_ore(), os.path.join(BLOCK_DIR, "raw_mana_crystal_ore.png"))
+    save(gen_arcana_cell(), os.path.join(BLOCK_DIR, "arcana_cell.png"))
 
 
 if __name__ == "__main__":

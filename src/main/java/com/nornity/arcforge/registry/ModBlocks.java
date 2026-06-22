@@ -1,5 +1,6 @@
 package com.nornity.arcforge.registry;
 
+import com.nornity.arcforge.machine.block.ArcanaCellBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
@@ -20,5 +21,14 @@ public class ModBlocks {
             .sound(SoundType.STONE)
             .strength(3.0f, 3.0f)
             .requiresCorrectToolForDrops())
+    );
+
+    public static final DeferredBlock<ArcanaCellBlock> ARCANA_CELL = BLOCKS.register(
+        "arcana_cell",
+        id -> new ArcanaCellBlock(BlockBehaviour.Properties.of()
+            .setId(ResourceKey.create(Registries.BLOCK, id))
+            .mapColor(MapColor.COLOR_LIGHT_BLUE)
+            .sound(SoundType.AMETHYST)
+            .strength(3.0f, 6.0f))
     );
 }
