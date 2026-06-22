@@ -12,13 +12,14 @@ PREVIEW_DIR = os.path.join(os.path.dirname(__file__), "model_previews")
 
 def main():
     if len(sys.argv) < 2:
-        print("usage: python3 view_model.py <block_model_name>")
+        print("usage: python3 view_model.py <block_model_name> [--flip]")
         sys.exit(1)
     name = sys.argv[1]
+    flip = "--flip" in sys.argv[2:]
     os.makedirs(PREVIEW_DIR, exist_ok=True)
     model_path = os.path.join(MODEL_DIR, f"{name}.json")
-    out_path = os.path.join(PREVIEW_DIR, f"{name}.png")
-    render_model(model_path, ASSETS_ROOT, out_path)
+    out_path = os.path.join(PREVIEW_DIR, f"{name}{'_flip' if flip else ''}.png")
+    render_model(model_path, ASSETS_ROOT, out_path, flip=flip)
 
 
 if __name__ == "__main__":
