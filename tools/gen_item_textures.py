@@ -188,6 +188,44 @@ def gen_spell_assembler_glyph():
     return img
 
 
+def gen_arcane_furnace_body():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(90, 90, 96, 255))
+    d.rectangle([1, 1, 14, 14], outline=(60, 60, 66, 255), width=1)
+    for x, y in [(3, 3), (12, 3), (3, 12), (12, 12)]:
+        d.point((x, y), fill=(130, 130, 138, 255))
+    return img
+
+
+def gen_arcane_furnace_front():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(70, 70, 76, 255))
+    d.rectangle([1, 1, 14, 14], outline=(45, 45, 50, 255), width=1)
+    d.rectangle([4, 6, 11, 11], fill=(20, 16, 24, 255), outline=(40, 36, 46, 255))
+    return img
+
+
+def gen_arcane_furnace_front_lit():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(70, 70, 76, 255))
+    d.rectangle([1, 1, 14, 14], outline=(45, 45, 50, 255), width=1)
+    d.rectangle([4, 6, 11, 11], fill=(120, 50, 150, 255), outline=(200, 140, 230, 255))
+    d.polygon([(6, 10), (7, 7), (8, 9), (9, 6), (10, 10)], fill=(255, 150, 60, 255))
+    return img
+
+
+def gen_arcane_furnace_socket():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(96, 72, 40, 255))
+    d.ellipse([3, 3, 12, 12], outline=(168, 130, 58, 255), width=1)
+    d.ellipse([5, 5, 10, 10], fill=(124, 77, 196, 255), outline=(190, 158, 230, 255))
+    return img
+
+
 def gen_basic_spell_core():
     img = new_canvas()
     d = ImageDraw.Draw(img)
@@ -279,6 +317,29 @@ def gen_spell_assembler_gui():
     return img
 
 
+def gen_arcane_furnace_gui():
+    img = Image.new("RGBA", (176, 166), (198, 198, 198, 255))
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 175, 165], outline=(55, 55, 55, 255))
+
+    slot_positions = [
+        (8, 35),  # core
+        (56, 17),  # input
+        (56, 53),  # charge
+        (116, 35),  # output
+    ]
+    for x, y in slot_positions:
+        _draw_slot(d, x, y)
+
+    for row in range(3):
+        for col in range(9):
+            _draw_slot(d, 8 + col * 18, 84 + row * 18)
+    for col in range(9):
+        _draw_slot(d, 8 + col * 18, 142)
+
+    return img
+
+
 def main():
     os.makedirs(ITEM_DIR, exist_ok=True)
     os.makedirs(BLOCK_DIR, exist_ok=True)
@@ -322,6 +383,13 @@ def main():
     save(gen_spell_assembler_glyph(), os.path.join(BLOCK_DIR, "spell_assembler", "glyph.png"))
 
     save(gen_spell_assembler_gui(), os.path.join(GUI_DIR, "spell_assembler.png"))
+
+    os.makedirs(os.path.join(BLOCK_DIR, "arcane_furnace"), exist_ok=True)
+    save(gen_arcane_furnace_body(), os.path.join(BLOCK_DIR, "arcane_furnace", "body.png"))
+    save(gen_arcane_furnace_front(), os.path.join(BLOCK_DIR, "arcane_furnace", "front.png"))
+    save(gen_arcane_furnace_front_lit(), os.path.join(BLOCK_DIR, "arcane_furnace", "front_lit.png"))
+    save(gen_arcane_furnace_socket(), os.path.join(BLOCK_DIR, "arcane_furnace", "socket.png"))
+    save(gen_arcane_furnace_gui(), os.path.join(GUI_DIR, "arcane_furnace.png"))
 
 
 if __name__ == "__main__":

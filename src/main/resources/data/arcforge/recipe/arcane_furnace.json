@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BBB",
+    "BAB",
+    "BRB"
+  ],
+  "key": {
+    "B": "arcforge:brass_frame",
+    "A": "arcforge:arcana_coil",
+    "R": "arcforge:rune_plate"
+  },
+  "result": {
+    "id": "arcforge:arcane_furnace",
+    "count": 1
+  }
+}

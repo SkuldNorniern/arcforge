@@ -61,4 +61,7 @@ public class ModItems {
 
     public static final DeferredItem<BlockItem> SPELL_ASSEMBLER =
         ITEMS.registerSimpleBlockItem(ModBlocks.SPELL_ASSEMBLER);
+
+    public static final DeferredItem<BlockItem> ARCANE_FURNACE =
+        ITEMS.registerSimpleBlockItem(ModBlocks.ARCANE_FURNACE);
 }

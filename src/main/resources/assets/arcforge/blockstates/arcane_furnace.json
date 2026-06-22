@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model": "arcforge:block/arcane_furnace" },
+    "lit=true": { "model": "arcforge:block/arcane_furnace_lit" }
+  }
+}

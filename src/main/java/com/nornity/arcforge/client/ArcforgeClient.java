@@ -1,6 +1,7 @@
 package com.nornity.arcforge.client;
 
 import com.nornity.arcforge.Arcforge;
+import com.nornity.arcforge.client.screen.ArcaneFurnaceScreen;
 import com.nornity.arcforge.client.screen.SpellAssemblerScreen;
 import com.nornity.arcforge.registry.ModMenuTypes;
 import net.neoforged.api.distmarker.Dist;
@@ -13,5 +14,6 @@ public class ArcforgeClient {
     @SubscribeEvent
     static void registerScreens(RegisterMenuScreensEvent event) {
         event.register(ModMenuTypes.SPELL_ASSEMBLER.get(), SpellAssemblerScreen::new);
+        event.register(ModMenuTypes.ARCANE_FURNACE.get(), ArcaneFurnaceScreen::new);
     }
 }

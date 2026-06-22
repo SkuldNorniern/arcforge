@@ -1,5 +1,6 @@
 package com.nornity.arcforge.registry;
 
+import com.nornity.arcforge.machine.menu.ArcaneFurnaceMenu;
 import com.nornity.arcforge.machine.menu.SpellAssemblerMenu;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.MenuType;
@@ -14,4 +15,8 @@ public class ModMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<SpellAssemblerMenu>> SPELL_ASSEMBLER =
         MENU_TYPES.register("spell_assembler",
             () -> IMenuTypeExtension.create((windowId, inventory, buf) -> new SpellAssemblerMenu(windowId, inventory)));
+
+    public static final DeferredHolder<MenuType<?>, MenuType<ArcaneFurnaceMenu>> ARCANE_FURNACE =
+        MENU_TYPES.register("arcane_furnace",
+            () -> IMenuTypeExtension.create((windowId, inventory, buf) -> new ArcaneFurnaceMenu(windowId, inventory)));
 }

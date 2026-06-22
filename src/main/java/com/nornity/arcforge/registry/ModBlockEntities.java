@@ -1,6 +1,7 @@
 package com.nornity.arcforge.registry;
 
 import com.nornity.arcforge.machine.blockentity.ArcanaCellBlockEntity;
+import com.nornity.arcforge.machine.blockentity.ArcaneFurnaceBlockEntity;
 import com.nornity.arcforge.machine.blockentity.SpellAssemblerBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -21,5 +22,11 @@ public class ModBlockEntities {
         BLOCK_ENTITY_TYPES.register(
             "spell_assembler",
             () -> new BlockEntityType<>(SpellAssemblerBlockEntity::new, ModBlocks.SPELL_ASSEMBLER.get())
+        );
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ArcaneFurnaceBlockEntity>> ARCANE_FURNACE =
+        BLOCK_ENTITY_TYPES.register(
+            "arcane_furnace",
+            () -> new BlockEntityType<>(ArcaneFurnaceBlockEntity::new, ModBlocks.ARCANE_FURNACE.get())
         );
 }

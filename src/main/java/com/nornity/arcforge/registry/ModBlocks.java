@@ -1,6 +1,7 @@
 package com.nornity.arcforge.registry;
 
 import com.nornity.arcforge.machine.block.ArcanaCellBlock;
+import com.nornity.arcforge.machine.block.ArcaneFurnaceBlock;
 import com.nornity.arcforge.machine.block.RuneScriberBlock;
 import com.nornity.arcforge.machine.block.SpellAssemblerBlock;
 import net.minecraft.core.registries.Registries;
@@ -52,5 +53,16 @@ public class ModBlocks {
             .sound(SoundType.AMETHYST)
             .strength(3.0f, 6.0f)
             .noOcclusion())
+    );
+
+    public static final DeferredBlock<ArcaneFurnaceBlock> ARCANE_FURNACE = BLOCKS.register(
+        "arcane_furnace",
+        id -> new ArcaneFurnaceBlock(BlockBehaviour.Properties.of()
+            .setId(ResourceKey.create(Registries.BLOCK, id))
+            .mapColor(MapColor.COLOR_GRAY)
+            .sound(SoundType.STONE)
+            .strength(3.5f, 6.0f)
+            .lightLevel(state -> state.getValue(ArcaneFurnaceBlock.LIT) ? 13 : 0)
+            .requiresCorrectToolForDrops())
     );
 }

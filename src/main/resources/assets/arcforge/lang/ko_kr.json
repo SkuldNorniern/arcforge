@@ -25,5 +25,7 @@
   "block.arcforge.rune_scriber": "룬 서기대",
   "container.arcforge.rune_scriber": "룬 서기대",
   "block.arcforge.spell_assembler": "스펠 조립기",
-  "container.arcforge.spell_assembler": "스펠 조립기"
+  "container.arcforge.spell_assembler": "스펠 조립기",
+  "block.arcforge.arcane_furnace": "비전 용광로",
+  "container.arcforge.arcane_furnace": "비전 용광로"
 }
