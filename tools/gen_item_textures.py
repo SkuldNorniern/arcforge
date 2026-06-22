@@ -226,6 +226,30 @@ def gen_arcane_furnace_socket():
     return img
 
 
+def gen_rune_lamp_post():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(96, 72, 40, 255))
+    d.rectangle([1, 1, 14, 14], outline=(168, 130, 58, 255), width=1)
+    return img
+
+
+def gen_rune_lamp_head():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(60, 56, 50, 255))
+    d.rectangle([2, 2, 13, 13], fill=(40, 38, 34, 255), outline=(80, 75, 65, 255))
+    return img
+
+
+def gen_rune_lamp_head_lit():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(255, 240, 180, 255))
+    d.rectangle([2, 2, 13, 13], fill=(255, 250, 220, 255), outline=(255, 255, 255, 255))
+    return img
+
+
 def gen_basic_spell_core():
     img = new_canvas()
     d = ImageDraw.Draw(img)
@@ -390,6 +414,11 @@ def main():
     save(gen_arcane_furnace_front_lit(), os.path.join(BLOCK_DIR, "arcane_furnace", "front_lit.png"))
     save(gen_arcane_furnace_socket(), os.path.join(BLOCK_DIR, "arcane_furnace", "socket.png"))
     save(gen_arcane_furnace_gui(), os.path.join(GUI_DIR, "arcane_furnace.png"))
+
+    os.makedirs(os.path.join(BLOCK_DIR, "rune_lamp"), exist_ok=True)
+    save(gen_rune_lamp_post(), os.path.join(BLOCK_DIR, "rune_lamp", "post.png"))
+    save(gen_rune_lamp_head(), os.path.join(BLOCK_DIR, "rune_lamp", "head.png"))
+    save(gen_rune_lamp_head_lit(), os.path.join(BLOCK_DIR, "rune_lamp", "head_lit.png"))
 
 
 if __name__ == "__main__":

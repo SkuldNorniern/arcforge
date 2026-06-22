@@ -2,6 +2,7 @@ package com.nornity.arcforge.registry;
 
 import com.nornity.arcforge.machine.block.ArcanaCellBlock;
 import com.nornity.arcforge.machine.block.ArcaneFurnaceBlock;
+import com.nornity.arcforge.machine.block.RuneLampBlock;
 import com.nornity.arcforge.machine.block.RuneScriberBlock;
 import com.nornity.arcforge.machine.block.SpellAssemblerBlock;
 import net.minecraft.core.registries.Registries;
@@ -64,5 +65,16 @@ public class ModBlocks {
             .strength(3.5f, 6.0f)
             .lightLevel(state -> state.getValue(ArcaneFurnaceBlock.LIT) ? 13 : 0)
             .requiresCorrectToolForDrops())
+    );
+
+    public static final DeferredBlock<RuneLampBlock> RUNE_LAMP = BLOCKS.register(
+        "rune_lamp",
+        id -> new RuneLampBlock(BlockBehaviour.Properties.of()
+            .setId(ResourceKey.create(Registries.BLOCK, id))
+            .mapColor(MapColor.COLOR_YELLOW)
+            .sound(SoundType.AMETHYST)
+            .strength(2.0f, 4.0f)
+            .lightLevel(state -> state.getValue(RuneLampBlock.LIT) ? 15 : 0)
+            .noOcclusion())
     );
 }

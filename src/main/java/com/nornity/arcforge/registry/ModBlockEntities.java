@@ -2,6 +2,7 @@ package com.nornity.arcforge.registry;
 
 import com.nornity.arcforge.machine.blockentity.ArcanaCellBlockEntity;
 import com.nornity.arcforge.machine.blockentity.ArcaneFurnaceBlockEntity;
+import com.nornity.arcforge.machine.blockentity.RuneLampBlockEntity;
 import com.nornity.arcforge.machine.blockentity.SpellAssemblerBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -28,5 +29,11 @@ public class ModBlockEntities {
         BLOCK_ENTITY_TYPES.register(
             "arcane_furnace",
             () -> new BlockEntityType<>(ArcaneFurnaceBlockEntity::new, ModBlocks.ARCANE_FURNACE.get())
+        );
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<RuneLampBlockEntity>> RUNE_LAMP =
+        BLOCK_ENTITY_TYPES.register(
+            "rune_lamp",
+            () -> new BlockEntityType<>(RuneLampBlockEntity::new, ModBlocks.RUNE_LAMP.get())
         );
 }

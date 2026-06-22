@@ -27,5 +27,6 @@
   "block.arcforge.spell_assembler": "Spell Assembler",
   "container.arcforge.spell_assembler": "Spell Assembler",
   "block.arcforge.arcane_furnace": "Arcane Furnace",
-  "container.arcforge.arcane_furnace": "Arcane Furnace"
+  "container.arcforge.arcane_furnace": "Arcane Furnace",
+  "block.arcforge.rune_lamp": "Rune Lamp"
 }

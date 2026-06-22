@@ -27,5 +27,6 @@
   "block.arcforge.spell_assembler": "스펠 조립기",
   "container.arcforge.spell_assembler": "스펠 조립기",
   "block.arcforge.arcane_furnace": "비전 용광로",
-  "container.arcforge.arcane_furnace": "비전 용광로"
+  "container.arcforge.arcane_furnace": "비전 용광로",
+  "block.arcforge.rune_lamp": "룬 램프"
 }

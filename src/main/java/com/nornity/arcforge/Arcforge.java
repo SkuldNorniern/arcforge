@@ -55,6 +55,7 @@ public class Arcforge {
                 output.accept(ModItems.RUNE_SCRIBER.get());
                 output.accept(ModItems.SPELL_ASSEMBLER.get());
                 output.accept(ModItems.ARCANE_FURNACE.get());
+                output.accept(ModItems.RUNE_LAMP.get());
             })
             .build());
 

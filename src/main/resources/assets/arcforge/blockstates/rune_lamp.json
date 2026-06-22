@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model": "arcforge:block/rune_lamp" },
+    "lit=true": { "model": "arcforge:block/rune_lamp_lit" }
+  }
+}
