@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "arcforge:item/arcana_coil"
+    "layer0": "arcforge:item/materials/arcana_coil"
   }
 }

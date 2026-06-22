@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "arcforge:item/refined_mana_crystal"
+    "layer0": "arcforge:item/materials/refined_mana_crystal"
   }
 }

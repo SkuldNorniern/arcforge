@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "arcforge:item/heat_rune"
+    "layer0": "arcforge:item/runes/heat_rune"
   }
 }

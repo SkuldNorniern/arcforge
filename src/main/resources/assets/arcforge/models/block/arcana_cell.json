@@ -1,8 +1,8 @@
 {
   "textures": {
-    "frame": "arcforge:block/arcana_cell_frame",
-    "crystal": "arcforge:block/arcana_cell_crystal",
-    "particle": "arcforge:block/arcana_cell_crystal"
+    "frame": "arcforge:block/arcana_cell/frame",
+    "crystal": "arcforge:block/arcana_cell/crystal",
+    "particle": "arcforge:block/arcana_cell/crystal"
   },
   "elements": [
     {

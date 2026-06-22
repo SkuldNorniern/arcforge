@@ -285,36 +285,41 @@ def main():
     os.makedirs(GUI_DIR, exist_ok=True)
 
     items = {
-        "raw_mana_crystal": gen_raw_mana_crystal,
-        "refined_mana_crystal": gen_refined_mana_crystal,
-        "runic_dust": gen_runic_dust,
-        "brass_frame": gen_brass_frame,
-        "arcana_coil": gen_arcana_coil,
-        "rune_plate": gen_rune_plate,
-        "heat_rune": gen_heat_rune,
-        "light_rune": gen_light_rune,
-        "pull_rune": gen_pull_rune,
-        "push_rune": gen_push_rune,
-        "touch_glyph": gen_touch_glyph,
-        "self_glyph": gen_self_glyph,
-        "area_glyph": gen_area_glyph,
-        "block_sigil": gen_block_sigil,
-        "item_sigil": gen_item_sigil,
-        "machine_sigil": gen_machine_sigil,
-        "basic_spell_core": gen_basic_spell_core,
+        "materials/raw_mana_crystal": gen_raw_mana_crystal,
+        "materials/refined_mana_crystal": gen_refined_mana_crystal,
+        "materials/runic_dust": gen_runic_dust,
+        "materials/brass_frame": gen_brass_frame,
+        "materials/arcana_coil": gen_arcana_coil,
+        "materials/rune_plate": gen_rune_plate,
+        "runes/heat_rune": gen_heat_rune,
+        "runes/light_rune": gen_light_rune,
+        "runes/pull_rune": gen_pull_rune,
+        "runes/push_rune": gen_push_rune,
+        "glyphs/touch_glyph": gen_touch_glyph,
+        "glyphs/self_glyph": gen_self_glyph,
+        "glyphs/area_glyph": gen_area_glyph,
+        "sigils/block_sigil": gen_block_sigil,
+        "sigils/item_sigil": gen_item_sigil,
+        "sigils/machine_sigil": gen_machine_sigil,
+        "cores/basic_spell_core": gen_basic_spell_core,
     }
     for name, gen in items.items():
-        save(gen(), os.path.join(ITEM_DIR, f"{name}.png"))
+        out_path = os.path.join(ITEM_DIR, f"{name}.png")
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        save(gen(), out_path)
 
     save(gen_raw_mana_crystal_ore(), os.path.join(BLOCK_DIR, "raw_mana_crystal_ore.png"))
-    save(gen_arcana_cell_frame(), os.path.join(BLOCK_DIR, "arcana_cell_frame.png"))
-    save(gen_arcana_cell_crystal(), os.path.join(BLOCK_DIR, "arcana_cell_crystal.png"))
-    save(gen_rune_scriber_desk(), os.path.join(BLOCK_DIR, "rune_scriber_desk.png"))
-    save(gen_rune_scriber_tablet(), os.path.join(BLOCK_DIR, "rune_scriber_tablet.png"))
-    save(gen_rune_scriber_stylus(), os.path.join(BLOCK_DIR, "rune_scriber_stylus.png"))
-    save(gen_spell_assembler_base(), os.path.join(BLOCK_DIR, "spell_assembler_base.png"))
-    save(gen_spell_assembler_socket(), os.path.join(BLOCK_DIR, "spell_assembler_socket.png"))
-    save(gen_spell_assembler_glyph(), os.path.join(BLOCK_DIR, "spell_assembler_glyph.png"))
+    os.makedirs(os.path.join(BLOCK_DIR, "arcana_cell"), exist_ok=True)
+    save(gen_arcana_cell_frame(), os.path.join(BLOCK_DIR, "arcana_cell", "frame.png"))
+    save(gen_arcana_cell_crystal(), os.path.join(BLOCK_DIR, "arcana_cell", "crystal.png"))
+    os.makedirs(os.path.join(BLOCK_DIR, "rune_scriber"), exist_ok=True)
+    save(gen_rune_scriber_desk(), os.path.join(BLOCK_DIR, "rune_scriber", "desk.png"))
+    save(gen_rune_scriber_tablet(), os.path.join(BLOCK_DIR, "rune_scriber", "tablet.png"))
+    save(gen_rune_scriber_stylus(), os.path.join(BLOCK_DIR, "rune_scriber", "stylus.png"))
+    os.makedirs(os.path.join(BLOCK_DIR, "spell_assembler"), exist_ok=True)
+    save(gen_spell_assembler_base(), os.path.join(BLOCK_DIR, "spell_assembler", "base.png"))
+    save(gen_spell_assembler_socket(), os.path.join(BLOCK_DIR, "spell_assembler", "socket.png"))
+    save(gen_spell_assembler_glyph(), os.path.join(BLOCK_DIR, "spell_assembler", "glyph.png"))
 
     save(gen_spell_assembler_gui(), os.path.join(GUI_DIR, "spell_assembler.png"))
 

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "arcforge:item/item_sigil"
+    "layer0": "arcforge:item/sigils/item_sigil"
   }
 }

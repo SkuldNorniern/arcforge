@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "arcforge:item/runic_dust"
+    "layer0": "arcforge:item/materials/runic_dust"
   }
 }

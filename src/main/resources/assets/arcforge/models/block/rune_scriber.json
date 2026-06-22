@@ -1,9 +1,9 @@
 {
   "textures": {
-    "desk": "arcforge:block/rune_scriber_desk",
-    "tablet": "arcforge:block/rune_scriber_tablet",
-    "stylus": "arcforge:block/rune_scriber_stylus",
-    "particle": "arcforge:block/rune_scriber_desk"
+    "desk": "arcforge:block/rune_scriber/desk",
+    "tablet": "arcforge:block/rune_scriber/tablet",
+    "stylus": "arcforge:block/rune_scriber/stylus",
+    "particle": "arcforge:block/rune_scriber/desk"
   },
   "elements": [
     {

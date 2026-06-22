@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "arcforge:item/rune_plate"
+    "layer0": "arcforge:item/materials/rune_plate"
   }
 }

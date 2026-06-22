@@ -1,9 +1,9 @@
 {
   "textures": {
-    "base": "arcforge:block/spell_assembler_base",
-    "socket": "arcforge:block/spell_assembler_socket",
-    "glyph": "arcforge:block/spell_assembler_glyph",
-    "particle": "arcforge:block/spell_assembler_base"
+    "base": "arcforge:block/spell_assembler/base",
+    "socket": "arcforge:block/spell_assembler/socket",
+    "glyph": "arcforge:block/spell_assembler/glyph",
+    "particle": "arcforge:block/spell_assembler/base"
   },
   "elements": [
     {

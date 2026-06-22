@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "arcforge:item/basic_spell_core"
+    "layer0": "arcforge:item/cores/basic_spell_core"
   }
 }
