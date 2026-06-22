@@ -7,6 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
@@ -19,11 +20,14 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jspecify.annotations.Nullable;
 
 public class ArcaneFurnaceBlock extends BaseEntityBlock {
     public static final MapCodec<ArcaneFurnaceBlock> CODEC = simpleCodec(ArcaneFurnaceBlock::new);
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
+    private static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 16, 15);
 
     public ArcaneFurnaceBlock(BlockBehaviour.Properties properties) {
         super(properties);
@@ -59,5 +63,10 @@ public class ArcaneFurnaceBlock extends BaseEntityBlock {
             player.openMenu(furnace);
         }
         return InteractionResult.SUCCESS;
+    }
+
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return SHAPE;
     }
 }
