@@ -6,7 +6,9 @@ from PIL import Image, ImageDraw
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "utils"))
 from pixel_art import new_canvas, save, save_animated  # noqa: E402
+from gen_item_definitions import generate_item_definitions  # noqa: E402
 
+ASSETS_ROOT = os.path.join(os.path.dirname(__file__), "..", "src", "main", "resources")
 ITEM_DIR = os.path.join(
     os.path.dirname(__file__), "..", "src", "main", "resources", "assets", "arcforge", "textures", "item"
 )
@@ -437,6 +439,8 @@ def main():
     save(gen_rune_lamp_post(), os.path.join(BLOCK_DIR, "rune_lamp", "post.png"))
     save(gen_rune_lamp_head(), os.path.join(BLOCK_DIR, "rune_lamp", "head.png"))
     save_animated(gen_rune_lamp_head_lit_frames(), os.path.join(BLOCK_DIR, "rune_lamp", "head_lit.png"), frametime=8)
+
+    generate_item_definitions(ASSETS_ROOT, "arcforge")
 
 
 if __name__ == "__main__":
