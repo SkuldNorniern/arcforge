@@ -1,0 +1,56 @@
+{
+  "textures": {
+    "desk": "arcforge:block/rune_scriber_desk",
+    "tablet": "arcforge:block/rune_scriber_tablet",
+    "stylus": "arcforge:block/rune_scriber_stylus",
+    "particle": "arcforge:block/rune_scriber_desk"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 6, 16],
+      "faces": {
+        "north": { "uv": [0, 0, 16, 16], "texture": "#desk" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#desk" },
+        "east": { "uv": [0, 0, 16, 16], "texture": "#desk" },
+        "west": { "uv": [0, 0, 16, 16], "texture": "#desk" },
+        "up": { "uv": [0, 0, 16, 16], "texture": "#desk" },
+        "down": { "uv": [0, 0, 16, 16], "texture": "#desk" }
+      }
+    },
+    {
+      "from": [3, 6, 5],
+      "to": [13, 8, 11],
+      "rotation": {
+        "origin": [8, 6, 11],
+        "axis": "x",
+        "angle": 22.5
+      },
+      "faces": {
+        "north": { "uv": [0, 0, 16, 16], "texture": "#tablet" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#tablet" },
+        "east": { "uv": [0, 0, 16, 16], "texture": "#tablet" },
+        "west": { "uv": [0, 0, 16, 16], "texture": "#tablet" },
+        "up": { "uv": [0, 0, 16, 16], "texture": "#tablet" },
+        "down": { "uv": [0, 0, 16, 16], "texture": "#tablet" }
+      }
+    },
+    {
+      "from": [11, 8, 10],
+      "to": [12, 11, 11],
+      "rotation": {
+        "origin": [11, 8, 10],
+        "axis": "z",
+        "angle": 22.5
+      },
+      "faces": {
+        "north": { "uv": [0, 0, 16, 16], "texture": "#stylus" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#stylus" },
+        "east": { "uv": [0, 0, 16, 16], "texture": "#stylus" },
+        "west": { "uv": [0, 0, 16, 16], "texture": "#stylus" },
+        "up": { "uv": [0, 0, 16, 16], "texture": "#stylus" },
+        "down": { "uv": [0, 0, 16, 16], "texture": "#stylus" }
+      }
+    }
+  ]
+}

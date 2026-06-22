@@ -113,6 +113,32 @@ def gen_arcana_cell():
     return img
 
 
+def gen_rune_scriber_desk():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(92, 62, 38, 255))
+    for y in range(0, 16, 4):
+        d.line([(0, y), (15, y)], fill=(74, 48, 28, 255))
+    return img
+
+
+def gen_rune_scriber_tablet():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(46, 28, 64, 255))
+    d.polygon([(7, 3), (12, 7), (7, 11), (2, 7)], outline=(190, 158, 230, 255))
+    d.point((7, 7), fill=(230, 210, 255, 255))
+    return img
+
+
+def gen_rune_scriber_stylus():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(168, 130, 58, 255))
+    d.rectangle([2, 2, 13, 13], outline=(214, 176, 96, 255), width=1)
+    return img
+
+
 def main():
     os.makedirs(ITEM_DIR, exist_ok=True)
     os.makedirs(BLOCK_DIR, exist_ok=True)
@@ -133,6 +159,9 @@ def main():
 
     save(gen_raw_mana_crystal_ore(), os.path.join(BLOCK_DIR, "raw_mana_crystal_ore.png"))
     save(gen_arcana_cell(), os.path.join(BLOCK_DIR, "arcana_cell.png"))
+    save(gen_rune_scriber_desk(), os.path.join(BLOCK_DIR, "rune_scriber_desk.png"))
+    save(gen_rune_scriber_tablet(), os.path.join(BLOCK_DIR, "rune_scriber_tablet.png"))
+    save(gen_rune_scriber_stylus(), os.path.join(BLOCK_DIR, "rune_scriber_stylus.png"))
 
 
 if __name__ == "__main__":

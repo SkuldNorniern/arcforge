@@ -12,5 +12,7 @@
   "block.arcforge.raw_mana_crystal_ore": "원석 마나 결정 광석",
   "block.arcforge.arcana_cell": "아르카나 셀",
   "item.arcforge.arcana_cell.capacity": "최대 %s 아르카나 저장",
-  "message.arcforge.arcana_cell.charge": "아르카나: %s / %s"
+  "message.arcforge.arcana_cell.charge": "아르카나: %s / %s",
+  "block.arcforge.rune_scriber": "룬 서기대",
+  "container.arcforge.rune_scriber": "룬 서기대"
 }

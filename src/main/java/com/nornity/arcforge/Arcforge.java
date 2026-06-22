@@ -42,6 +42,7 @@ public class Arcforge {
                 output.accept(ModItems.BASIC_SPELL_CORE.get());
                 output.accept(ModItems.RAW_MANA_CRYSTAL_ORE.get());
                 output.accept(ModItems.ARCANA_CELL.get());
+                output.accept(ModItems.RUNE_SCRIBER.get());
             })
             .build());
 

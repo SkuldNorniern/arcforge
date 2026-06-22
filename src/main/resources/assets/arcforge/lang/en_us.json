@@ -12,5 +12,7 @@
   "block.arcforge.raw_mana_crystal_ore": "Raw Mana Crystal Ore",
   "block.arcforge.arcana_cell": "Arcana Cell",
   "item.arcforge.arcana_cell.capacity": "Stores up to %s Arcana",
-  "message.arcforge.arcana_cell.charge": "Arcana: %s / %s"
+  "message.arcforge.arcana_cell.charge": "Arcana: %s / %s",
+  "block.arcforge.rune_scriber": "Rune Scriber",
+  "container.arcforge.rune_scriber": "Rune Scriber"
 }

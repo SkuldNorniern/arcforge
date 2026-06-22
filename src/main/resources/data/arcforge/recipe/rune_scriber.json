@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    " R ",
+    "BBB"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "R": "arcforge:rune_plate",
+    "B": "arcforge:brass_frame"
+  },
+  "result": {
+    "id": "arcforge:rune_scriber",
+    "count": 1
+  }
+}

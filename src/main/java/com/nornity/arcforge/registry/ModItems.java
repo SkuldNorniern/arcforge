@@ -37,4 +37,7 @@ public class ModItems {
             props -> new ArcanaCellBlockItem(ModBlocks.ARCANA_CELL.get(), props),
             Item.Properties::new
         );
+
+    public static final DeferredItem<BlockItem> RUNE_SCRIBER =
+        ITEMS.registerSimpleBlockItem(ModBlocks.RUNE_SCRIBER);
 }
